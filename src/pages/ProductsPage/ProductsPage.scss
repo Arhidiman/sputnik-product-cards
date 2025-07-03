@@ -1,0 +1,32 @@
+.products-page {
+    &-container {
+        width: 100%;
+        padding: 20px
+    }
+    &_products {
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 25px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .products-page {
+        &_products {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+ }
+
+
+@media screen and (max-width: 500px) {
+    .products-page {
+        &_products {
+            display: flex;
+            flex-direction: column;
+            grid-template-columns: none
+        }
+    }
+ }
