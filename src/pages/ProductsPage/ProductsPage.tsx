@@ -10,8 +10,8 @@ export const ProductsPage: React.FC = () => {
 
                 <div className="products-page_products">
                     {
-                        mockProducts && mockProducts.map((product: IProductCard) => (
-                        <ProductCard {...product}/>
+                        mockProducts && mockProducts.map((product: IProductCard, i: number) => (
+                        <ProductCard key={i} {...product}/>
                         ))
                     }
                 </div>
